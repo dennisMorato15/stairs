@@ -2,27 +2,28 @@ package org.example.controller;
 
 
 public class Stairs {
-    public void climbingStairs(){
-        for (int i = 1; i <= 5; i++) {
-            for (int k = 1; k <= 5 - i; k++){
-                System.out.print(" ");
+    public void climbingStairs(int number){
+        for (int i = number ; i >= 0; i--) {
+            for (int k = 0; k < i; k++){
+                System.out.print("  ");
             }
-            for (int j = 1; j <= i; j++) {
-                System.out.print("*");
+            if (i == number){
+                System.out.println("_💒");
+            }else {
+                System.out.println("__|");
             }
-            System.out.println("");
         }
-
     }
-    public void goDownTheStairs(){
-        for (int i = 0; i <= 5; i++) {
-            for (int j = 0; j <= i; j++) {
-                System.out.print("*");
-            }
-            System.out.println("");
+    public void goDownTheStairs(int number){
+        System.out.println("🏡_");
+        for (int i = number; i <= 0; i++) {
+            for (int j = number; j <= i; j++) {
+            System.out.print("  ");
         }
+        System.out.println("|__");
+    }
     }
     public void path(int number) {
-
+        System.out.println("=================================================");
     }
 }

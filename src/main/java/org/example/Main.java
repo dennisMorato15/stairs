@@ -1,8 +1,8 @@
 package org.example;
 import org.example.view.ViewStairs;
 
-public class App {
-    public static void main(String[] args) throws InterruptedException {
+public class Main {
+    public static void main(String[] args){
         ViewStairs viewStairs = new ViewStairs();
         viewStairs.stairs();
     }
