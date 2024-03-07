@@ -11,23 +11,28 @@ public class ViewStairs {
 
     Stairs stairs = new Stairs();
     Validation validation = new Validation();
-    Scanner number = new Scanner(System.in);
+    Scanner number;
+    boolean validate;
     int numberValidate;
     public void stairs(){
-        System.out.println("Enter a number, this can be positive or negative: ");
-        if(validation.stairsValidationNumber(number)){
-            numberValidate = number.nextInt();
-            System.out.println(numberValidate);
-        }else{
-            System.out.println("dato no valido");
-        }
-        //int responseNumber = number.nextInt();
-
-
-
-        //stairs.path(20);
-        //stairs.climbingStairs(responseNumber);
-        //stairs.goDownTheStairs(responseNumber);
+        do {
+            do {
+                System.out.println("Enter a number, this can be positive or negative: ");
+                number = new Scanner(System.in);
+                validate = validation.stairsValidationNumber(number);
+                if (validate) {
+                    numberValidate = number.nextInt();
+                    if(numberValidate > 0){
+                        stairs.climbingStairs(numberValidate);
+                    } else if (numberValidate < 0) {
+                        stairs.goDownTheStairs(numberValidate);
+                    }else{
+                        stairs.path();
+                    }
+                    System.out.println("Do you want to continue? (Y) or other letters to leave");
+                    number.nextLine().toUpperCase();
+                }
+            }while (validation.validateExit(number.nextLine()));
+        }while(!validate);
     }
-
 }

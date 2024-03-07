@@ -21,9 +21,9 @@ public class Stairs {
             System.out.print("  ");
         }
         System.out.println("|__");
+        }
     }
-    }
-    public void path(int number) {
-        System.out.println("=================================================");
+    public void path() {
+        System.out.println("\uD83C\uDF33___________\uD83C\uDF33___________🌄");
     }
 }
