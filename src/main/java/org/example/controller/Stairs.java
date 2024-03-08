@@ -16,9 +16,9 @@ public class Stairs {
     }
     public void goDownTheStairs(int number){
         System.out.println("🏡_");
-        for (int i = number; i <= 0; i++) {
+        for (int i = number; i < 0; i++) {
             for (int j = number; j <= i; j++) {
-            System.out.print("  ");
+            System.out.print(" ");
         }
         System.out.println("|__");
         }

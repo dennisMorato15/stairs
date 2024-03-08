@@ -12,4 +12,11 @@ public class Validation {
         String mayus = letter.toUpperCase();
         return mayus.equals("Y");
     }
+
+    public boolean stairsLimit(int numberOfSteps){
+        if (numberOfSteps > 20 || numberOfSteps < -20){
+            return false;
+        }
+        return true;
+    }
 }
