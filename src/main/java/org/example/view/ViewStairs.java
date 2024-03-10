@@ -11,7 +11,7 @@ public class ViewStairs {
     Stairs stairs = new Stairs();
     Validation validation = new Validation();
     Scanner number = new Scanner(System.in);
-    public void stairs(){
+    public void showStairs(){
         System.out.println("Enter a decimal number between -20 and 20 (or 'N-n' to exit)");
         while (number.hasNext()) {
             if (validation.stairsValidationNumber(number)) {
