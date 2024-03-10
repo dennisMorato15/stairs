@@ -8,41 +8,37 @@ import java.util.Scanner;
 
 
 public class ViewStairs {
-
     Stairs stairs = new Stairs();
     Validation validation = new Validation();
-    Scanner number;
-    boolean validateIfItIsNumber;
-    int numberValidate;
+    Scanner number = new Scanner(System.in);
     public void stairs(){
-        do {
-            do {
-                System.out.println("Enter an integer, this can be positive or negative: ");
-                number = new Scanner(System.in);
-                validateIfItIsNumber = validation.stairsValidationNumber(number);
-
-                if (validateIfItIsNumber) {
-                    do {
-                        numberValidate = number.nextInt();
-                        if (validation.stairsLimit(numberValidate)) {
-                            if (numberValidate > 0) {
-                                stairs.climbingStairs(numberValidate);
-                            } else if (numberValidate < 0) {
-                                stairs.goDownTheStairs(numberValidate);
-                            } else {
-                                stairs.path();
-                            }
-                        } else {
-                            System.out.println("Number of steps exceeds the limit. Please enter a value between -20 and 20.");
-                            System.out.println("Try again.");
-                            number.nextLine();
-                        }
-                    } while (!validation.stairsLimit(numberValidate));
+        System.out.println("Enter a decimal number between -20 and 20 (or 'N-n' to exit)");
+        while (number.hasNext()) {
+            if (validation.stairsValidationNumber(number)) {
+                int numberValidation = number.nextInt();
+                if (validation.stairsLimit(numberValidation)) {
+                    if (numberValidation < 0) {
+                        stairs.goDownTheStairs(numberValidation);
+                    } else if (numberValidation > 0) {
+                        stairs.climbingStairs(numberValidation);
+                    } else {
+                        stairs.path();
+                    }
+                    System.out.println("Enter a decimal number between -20 and 20 (or 'N-n' to exit)");
+                } else {
+                    System.out.println("The step limit is 20 or -20");
+                    System.out.println("Try again ->");
                 }
-                            System.out.println("Do you want to continue? (Y) or other letters to leave");
-                            number.nextLine();
-
-            } while (validation.validateExit(number.nextLine()));
-        } while (!validateIfItIsNumber);
+            } else {
+                String exit = number.next();
+                if (validation.validateExit(exit)) {
+                    System.out.println("Leaving the program... ");
+                    break;
+                } else {
+                    System.out.println("The data entered is not valid");
+                    System.out.println("Try again -> ");
+                }
+            }
+        }
     }
 }

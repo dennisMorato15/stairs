@@ -9,14 +9,10 @@ public class Validation {
     }
 
     public boolean validateExit(String letter){
-        String mayus = letter.toUpperCase();
-        return mayus.equals("Y");
+        return letter.equalsIgnoreCase("N");
     }
 
     public boolean stairsLimit(int numberOfSteps){
-        if (numberOfSteps > 20 || numberOfSteps < -20){
-            return false;
-        }
-        return true;
+        return numberOfSteps <= 20 && numberOfSteps >= -20;
     }
 }
