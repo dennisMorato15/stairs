@@ -1,11 +1,10 @@
 # Escalera
-En este proyecto tendras la oportunidad de ingresar un número y a partir de este numero se construira una escalera.
-- El programa solo recive numeros enteros positivos y negativos
-- El programa tiene un limite de escalones de 20
-- El programa no resive ningún tipo de caracter alfanumerico
-- El programa solo finaliza cuando se le envie el mensage de continuar o finalizar.
-Para que el programa muestre los escalones el usuario debera ingresar el numero de escalones con las caracteristicas nombradas anteriormente.
-Cuando el usuario ingrese un numero mayor al limite el programa le pedira que lo intente nuevamente.
+En este proyecto, tendrás la oportunidad de ingresar un número, a partir del cual se construirá una escalera.
+- El programa solo acepta números enteros, ya sean positivos o negativos.
+- Se ha establecido un límite de 20 escalones para el programa.
+- El programa solo finalizará cuando se le indique mediante la letra n / "N".
+Para que el programa muestre los escalones se debera ingresar un numero con las caracteristicas mencionadas anteriormente, en caso de que el usurio ingrese un dato alfanumerico el sistema le enviara un mensaje con una advertencia y luego podra continuar ingresando datos.
 
-Para finalizar el programa el usuario debera esperar el mensaje del sistema "Do you want to continue? (Y) or other letters to leave". Si se ingresa Y el programa continuara en su defecto el programa finalizara.
+El sistema solo se acara cuando el usuario ingrese la letra "n/N".
 
+![Stairs drawio](https://github.com/dennisMorato15/stairs/assets/126518475/a709cca1-5846-4daa-b9c9-cd4bbebafac0)
