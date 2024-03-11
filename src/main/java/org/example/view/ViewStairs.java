@@ -24,7 +24,7 @@ public class ViewStairs {
                     } else {
                         stairs.path();
                     }
-                    System.out.println("Enter a decimal number between -20 and 20 (or 'N-n' to exit)");
+                    System.out.println("well done!!! try again. Remember that to leave it is with the letter (n/N)");
                 } else {
                     System.out.println("The step limit is 20 or -20");
                     System.out.println("Try again ->");
